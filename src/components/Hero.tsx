@@ -45,7 +45,7 @@ export const Hero = () => {
 
             <div className="flex items-center gap-4">
               <a
-                href="https://linkedin.com/in/ahmed-eltyeb"
+                href="https://www.linkedin.com/in/ahmed-eltyeb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-lift"
@@ -54,7 +54,7 @@ export const Hero = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/ahmed-eltyeb"
+                href="https://github.com/ahmedaltyeb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-lift"

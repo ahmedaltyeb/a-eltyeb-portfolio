@@ -30,7 +30,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "ahmed-eltyeb",
-    href: "https://linkedin.com/in/ahmed-eltyeb",
+    href: "https://www.linkedin.com/in/ahmed-eltyeb/",
   },
 ];
 
@@ -130,7 +130,7 @@ export const Contact = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://github.com/ahmed-eltyeb"
+                  href="https://github.com/ahmedaltyeb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-lift"

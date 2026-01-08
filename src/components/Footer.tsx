@@ -11,7 +11,7 @@ export const Footer = () => {
             href="#home"
             className="text-xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            Ahmed<span className="text-primary">.</span>
+            Ahmed<span className="text-primary"> Eltyeb.</span>
           </a>
 
           <nav className="flex flex-wrap justify-center gap-6">

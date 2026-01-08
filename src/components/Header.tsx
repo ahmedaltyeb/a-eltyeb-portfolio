@@ -38,7 +38,7 @@ export const Header = () => {
             href="#home"
             className="text-xl md:text-2xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            Ahmed<span className="text-primary">.</span>
+            Ahmed<span className="text-primary"> Eltyeb.</span>
           </a>
 
           {/* Desktop Navigation */}

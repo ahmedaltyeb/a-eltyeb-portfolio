@@ -229,7 +229,7 @@ export const Projects = () => {
         >
           <Button variant="outline" size="lg" className="group" asChild>
             <a 
-              href="https://github.com/ahmed-eltyeb" 
+              href="https://github.com/ahmedaltyebb" 
               target="_blank" 
               rel="noopener noreferrer"
             >

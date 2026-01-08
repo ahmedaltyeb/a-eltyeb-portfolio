@@ -1,4 +1,5 @@
-import { useInView } from "@/hooks/useInView";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
 
@@ -31,65 +32,98 @@ const testimonials = [
     quote: "Ahmedeltyeb's UI/UX design improved user satisfaction significantly. His creativity and technical skills are exceptional.",
     initials: "GS",
   },
+  {
+  name: "Al Arabi Falcons",
+  role: "E-commerce & Marketing Client",
+  company: "Dubai, UAE",
+  quote: "Ahmedeltyeb transformed our digital presence. Beyond building a seamless website, his expertise in landing page optimization and digital marketing significantly boosted our conversion rates.",
+  initials: "AF",
+},
+{
+  name: "Epicminds IT",
+  role: "Web Applications Lead",
+  company: "Bangalore, India",
+  quote: "A highly efficient developer who spearheaded over 22 applications. His commitment to web accessibility and UX improvements brought a 30% increase in our site’s inclusivity.",
+  initials: "EI",
+},
+{
+  name: "Expert Caller",
+  role: "Frontend Developer Project",
+  company: "Bangalore, India",
+  quote: "He engineered custom API integrations that slashed our load times by 50% and overhauled our mobile experience, leading to a 45% surge in user engagement.",
+  initials: "EC",
+},   
 ];
 
+// إعدادات الحركة: تلاشي مع حركة رأسية بسيطة
+const variants: Variants = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -20 },
+};
+
 export const Testimonials = () => {
-  const { ref, isInView } = useInView(0.1);
+  const [index, setIndex] = useState(0);
+
+  // منطق التغيير التلقائي كل 5 ثوانٍ
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const current = testimonials[index];
 
   return (
-    <section id="testimonials" className="py-20 bg-muted/30">
+    <section id="testimonials" className="py-20 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div
-          ref={ref}
-          className={`transition-all duration-700 ${
-            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What Clients Say
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              See what clients and collaborators say about my work.
-            </p>
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            What Clients Say
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className={`group bg-card border-border hover:border-primary/50 hover:shadow-lg transition-all duration-500 ${
-                  isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <CardContent className="p-6">
-                  <Quote className="w-8 h-8 text-primary/40 mb-4 group-hover:text-primary/60 transition-colors" />
+        {/* حاوية ثابتة الارتفاع لمنع القفز في الصفحة */}
+        <div className="relative max-w-3xl mx-auto min-h-[300px] flex items-center justify-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={index}
+              variants={variants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              className="w-full"
+            >
+              <Card className="bg-card border-border shadow-md">
+                <CardContent className="p-8 md:p-12 text-center flex flex-col items-center">
+                  <Quote className="w-10 h-10 text-primary/20 mb-6" />
                   
-                  <p className="text-muted-foreground italic mb-6 leading-relaxed">
-                    "{testimonial.quote}"
+                  <p className="text-lg md:text-xl text-muted-foreground italic mb-8 leading-relaxed italic">
+                    "{current.quote}"
                   </p>
                   
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-semibold group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                      {testimonial.initials}
+                  <div className="flex items-center gap-4 text-left">
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
+                      {current.initials}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground">
-                        {testimonial.name}
+                      <h4 className="font-bold text-foreground leading-tight">
+                        {current.name}
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        {testimonial.role}
-                        {testimonial.company && `, ${testimonial.company}`}
+                        {current.role}
+                        {current.company && `, ${current.company}`}
                       </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
   );
-};
+};  
