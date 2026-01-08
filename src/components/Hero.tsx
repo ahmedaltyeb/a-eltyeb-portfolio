@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import profileImage from "@/assets/ahmed-profile.png";
 
@@ -40,6 +40,12 @@ export const Hero = () => {
               </Button>
               <Button size="lg" variant="outline" className="hover-lift" asChild>
                 <a href="#contact">Contact Me</a>
+              </Button>
+              <Button size="lg" variant="outline" className="hover-lift" asChild>
+                <a href="/KHALIFA_Web-Developer.pdf" download>
+                  <Download className="h-4 w-4 mr-2" />
+                  Download CV
+                </a>
               </Button>
             </div>
 

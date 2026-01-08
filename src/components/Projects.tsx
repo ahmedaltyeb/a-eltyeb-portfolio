@@ -72,7 +72,8 @@ const projects = [
     problem: "Businesses needed a centralized platform to monitor KPIs in real-time.",
     solution: "Built a responsive dashboard with dynamic charts, filters, and export functionality.",
     tech: ["React.js", "TypeScript", "TailwindCSS", "Chart.js", "REST API"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    image: "src/assets/React Analytics Dashboard.png",
+    // image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
   },
@@ -85,12 +86,28 @@ const projects = [
     problem: "Retail business needed an efficient point-of-sale system with invoice management.",
     solution: "Built a desktop application with intuitive UI, database integration, and PDF invoice generation.",
     tech: ["Python", "Tkinter", "SQLite", "jsPDF"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    image: "src/assets/invoice-managment.png",
+    // image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
   },
   {
-    id: 7,
+  id: 7,
+  title: "PharmaX Pharmacy POS",
+  category: "Python",
+  description:
+    "Desktop Point of Sale (POS) system designed specifically for pharmacies, providing sales management, invoice generation, inventory tracking, and customer handling with a clean and intuitive interface.",
+  problem:
+    "Pharmacies needed a reliable desktop-based POS system to manage daily sales, track medicine inventory, handle invoices, and reduce manual errors.",
+  solution:
+    "Developed a desktop POS application using Python and PySide6 with an SQLite database, enabling fast billing, real-time inventory updates, invoice printing, and structured data management.",
+  tech: ["Python", "PySide6", "SQLite3", "ReportLab"],
+  image: "src/assets/PharmaX-POS 1.png",
+  liveUrl: "#",
+  githubUrl: "#",
+},
+  {
+    id: 8,
     title: "Admin Panel UI",
     category: "React",
     description:
@@ -98,10 +115,27 @@ const projects = [
     problem: "Teams needed a reusable admin interface with consistent design patterns.",
     solution: "Created a modular component library with dark mode support and responsive layouts.",
     tech: ["React.js", "TailwindCSS", "REST API", "TypeScript"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: "src/assets/Admin Panel UI.jpeg",
+    // image: "htps://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
   },
+  {
+  id: 9,
+  title: "Japanese Medical Services Company – Visual Identity",
+  category: "Branding",
+  description:
+    "Complete visual identity design for a medical services company inspired by Japanese precision and minimalism, reflecting trust, professionalism, and healthcare excellence.",
+  problem:
+    "The company needed a strong and distinctive visual identity to represent its medical services, communicate credibility, and stand out in a competitive healthcare market.",
+  solution:
+    "Created a cohesive visual identity including logo design, color palette, typography, and brand guidelines, combining Japanese design principles with modern medical aesthetics.",
+  tech: ["Adobe Illustrator", "Adobe Photoshop", "Brand Strategy"],
+  image: "src/assets/Visual Indentity -JMS.jpeg",
+  liveUrl: "#",
+  githubUrl: "#",
+}
+
 ];
 
 const categories = ["All", "React", "E-commerce", "Business", "Python"];

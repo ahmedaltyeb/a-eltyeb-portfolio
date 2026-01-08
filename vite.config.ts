@@ -5,8 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // base: "/ahmed-dev-portfolio/", // تأكد من وجود الفاصلة (,) هنا في النهاية
-  server: {
+  base: '/a-eltyeb-portfolio/',   // أضف هذا السطر
+  server: { 
     host: "::",
     port: 8080,
   },
@@ -16,4 +16,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));  
+}));
