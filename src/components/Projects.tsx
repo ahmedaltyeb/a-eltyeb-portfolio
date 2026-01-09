@@ -72,7 +72,7 @@ const projects = [
     problem: "Businesses needed a centralized platform to monitor KPIs in real-time.",
     solution: "Built a responsive dashboard with dynamic charts, filters, and export functionality.",
     tech: ["React.js", "TypeScript", "TailwindCSS", "Chart.js", "REST API"],
-    image: "src/assets/React Analytics Dashboard.png",
+    image: "assets/React Analytics Dashboard.png",
     // image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
