@@ -24,7 +24,7 @@ export const PartnersMarquee = () => {
       {/* العنوان: تم الحفاظ عليه كبيراً (text-3xl / text-4xl) كما في الأقسام الأخرى */}
       <div className="container mx-auto px-4 mb-16 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Trusted <span className="text-[#00E5FF]">Partners</span>
+          Trusted <span className="text-primary">Partners</span>
         </h2>
         <div className="h-1 w-20 bg-[#00E5FF] mx-auto rounded-full opacity-50" />
       </div>

@@ -9,6 +9,12 @@ import projectLoof from "@/assets/project-loof.png";
 import projectKandora from "@/assets/project-kandora.png";
 import projectGoldSignature from "@/assets/project-gold-signature.png";
 import projectBusiness from "@/assets/project-business-website.png";
+import reactAnalytics from "@/assets/React Analytics Dashboard.png";
+import invoiceMgmt from "@/assets/invoice-managment.png";
+import pharmaxPos from "@/assets/PharmaX-POS 1.png";
+import adminPanel from "@/assets/Admin Panel UI.jpeg";
+import visualIdentity from "@/assets/Visual Indentity -JMS.jpeg";
+import alArabiFalcons from "@/assets/alarabaifalcons.png";  
 
 const projects = [
   {
@@ -72,7 +78,7 @@ const projects = [
     problem: "Businesses needed a centralized platform to monitor KPIs in real-time.",
     solution: "Built a responsive dashboard with dynamic charts, filters, and export functionality.",
     tech: ["React.js", "TypeScript", "TailwindCSS", "Chart.js", "REST API"],
-    image: "assets/React Analytics Dashboard.png",
+    image: "src/assets/React Analytics Dashboard.png",
     // image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
@@ -86,7 +92,7 @@ const projects = [
     problem: "Retail business needed an efficient point-of-sale system with invoice management.",
     solution: "Built a desktop application with intuitive UI, database integration, and PDF invoice generation.",
     tech: ["Python", "Tkinter", "SQLite", "jsPDF"],
-    image: "assets/invoice-managment.png",
+    image: "src/assets/invoice-managment.png",
     // image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
@@ -102,7 +108,7 @@ const projects = [
   solution:
     "Developed a desktop POS application using Python and PySide6 with an SQLite database, enabling fast billing, real-time inventory updates, invoice printing, and structured data management.",
   tech: ["Python", "PySide6", "SQLite3", "ReportLab"],
-  image: "assets/PharmaX-POS 1.png",
+  image: "src/assets/PharmaX-POS 1.png",
   liveUrl: "#",
   githubUrl: "#",
 },
@@ -115,7 +121,7 @@ const projects = [
     problem: "Teams needed a reusable admin interface with consistent design patterns.",
     solution: "Created a modular component library with dark mode support and responsive layouts.",
     tech: ["React.js", "TailwindCSS", "REST API", "TypeScript"],
-    image: "assets/Admin Panel UI.jpeg",
+    image: "src/assets/Admin Panel UI.jpeg",
     // image: "htps://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
@@ -131,11 +137,10 @@ const projects = [
   solution:
     "Created a cohesive visual identity including logo design, color palette, typography, and brand guidelines, combining Japanese design principles with modern medical aesthetics.",
   tech: ["Adobe Illustrator", "Adobe Photoshop", "Brand Strategy"],
-  image: "assets/Visual Indentity -JMS.jpeg",
+  image: "src/assets/Visual Indentity -JMS.jpeg",
   liveUrl: "#",
   githubUrl: "#",
-}
-
+},
 ];
 
 const categories = ["All", "React", "E-commerce", "Business", "Python"];
