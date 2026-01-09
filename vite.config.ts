@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/a-eltyeb-portfolio/',   // أضف هذا السطر
+  base: "/a-eltyeb-portfolio/",   // أضف هذا السطر
   server: { 
     host: "::",
     port: 8080,
