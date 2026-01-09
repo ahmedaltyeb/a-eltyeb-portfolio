@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({  
   // هذا السطر يكتشف إذا كان الموقع مرفوعاً على GitHub Pages أم Netlify تلقائياً
-  base: process.env.NODE_ENV === 'production' ? '/a-eltyeb-portfolio/' : '/',  
+  base: process.env.NETLIFY || process.env.VERCEL || process.env.VITE_BASE_PATH ? "/" : "/a-eltyeb-portfolio/",  
   server: {
     host: "::",
     port: 8080,
