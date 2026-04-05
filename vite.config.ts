@@ -4,12 +4,15 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({  
-  // هذا السطر يكتشف إذا كان الموقع مرفوعاً على GitHub Pages أم Netlify تلقائياً
-  base: process.env.NETLIFY || process.env.VERCEL || process.env.VITE_BASE_PATH ? "/" : "/a-eltyeb-portfolio/",
+  // التعديل هنا: نضمن أن Vercel دائماً يستخدم المسار الرئيسي
+  base: process.env.VERCEL || mode === 'production' ? '/' : '/', 
+  // ملاحظة: إذا كنت ستعود لـ GitHub Pages لاحقاً، اجعلها '/a-eltyeb-portfolio/'
+  
   server: {
     host: "::",
     port: 8080,
   },
+  // ... بقية الكود كما هو
   plugins: [
     react(),
     mode === "development" && componentTagger(),
